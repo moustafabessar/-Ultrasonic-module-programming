@@ -18,7 +18,7 @@ void SetupUltrasonic(void);
 void delay_10us();
 void SendTrigger(void);
 void ReceiveEcho(void);
-void RangeDetection(unsigned char d);
+void RangeDetection(unsigned char min, unsigned char max);
 
 
 
