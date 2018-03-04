@@ -81,9 +81,9 @@ void SetupUltrasonic()
 }
 
 
-void RangeDetection()
+void RangeDetection(unsigned char min, unsigned char max)
 {
-	if (distance >= 1 && distance <= 50)
+	if (distance >= min && distance <= max)
 	{
 		PORTA |= 1<<0;       // led is on if distance between 1cm and 50cm
 	}
