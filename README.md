@@ -5,4 +5,4 @@
 
 3- I used timer0 to send trigger while i used input capturing with interrupt of timer1 to read the echo signal width from sensor.
 
-4- There is error up to 2cm.
+4- There is an error up to 2cm.
