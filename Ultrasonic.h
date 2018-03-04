@@ -14,7 +14,7 @@
 #define Sensor_PORT   PORTD
 
 
-void Ultrasonic_Setup(void);
+void SetupUltrasonic(void);
 void delay_10us();
 void SendTrigger(void);
 void ReceiveEcho(void);
