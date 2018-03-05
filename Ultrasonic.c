@@ -15,7 +15,7 @@
  
   volatile float distance=0;
   volatile unsigned int count=0;
-  volatile unsigned char c=0;
+  volatile unsigned char visited=0;
  
  ISR(TIMER1_CAPT_vect)
  {
@@ -25,7 +25,7 @@
 	 if (c==0)
 	 {
 		 TCCR1B &= ~(1<<ICES1);                    //falling edge	
-		 c++;
+		 visited++;
 	 }	
  }
 
@@ -36,8 +36,8 @@ void ReceiveEcho()
 		 if (c==1)
 		 {
 			 TIMSK &= ~(1<<TICIE1);         // Disable input capturing interrupt 
-			 TCCR1B = 0x00;                 //resetting timer
-			 c = 0;
+			 TCCR1B = 0x00;                 // reset timer
+			 visited = 0;                   // clear visited for next measuring cycle
 			 count =0;
 		 }
 	
