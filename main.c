@@ -16,15 +16,15 @@
 
 int main(void)
 {
-	SetupUltrasonic();
-	sei();                  // Enabling Global interrupt
+     SetupUltrasonic();
+     sei();                  // Enabling Global interrupt
 
     while(1)
     {
         SendTrigger();
         ReceiveEcho();
         RangeDetection(1,50);     // specify min and max range makes led on
-		_delay_ms(70);                // Delay for each measurement cycle
+        _delay_ms(70);                // Delay for each measurement cycle
 	   
     }
 }
