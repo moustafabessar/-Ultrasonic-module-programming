@@ -64,7 +64,8 @@ void delay_10us()
 
 void SendTrigger(void)
 {
-/*********** Sending Trigger ***********/
+              /*********** Sending Trigger ***********/
+	
 	Sensor_PORT &= ~(1<<TRIGGER_PIN);
 	_delay_us(2);
 	Sensor_PORT |= (1<<TRIGGER_PIN);
