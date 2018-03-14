@@ -23,7 +23,7 @@ int main(void)
     {
         SendTrigger();
         ReceiveEcho();
-        RangeDetection(1,50);     // specify min and max range makes led on
+        RangeDetection(1,50);     // specify min and max range in centimeter makes led on
         _delay_ms(70);                // Delay for each measurement cycle
 	   
     }
